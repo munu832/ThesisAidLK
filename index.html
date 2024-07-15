@@ -3,25 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThesisAidLK - Academic Support Center</title>
+    <title>ThesisAidLK - Your One-Stop Academic Support Center</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="cover-banner">
-            <img src="path_to_your_logo.png" alt="ThesisAidLK Logo" class="logo">
-            <h1>ThesisAidLK</h1>
-            <p>Your One-Stop Academic Support Center</p>
-        </div>
-    </header>
+    <div class="cover-banner">
+        <img src="logo.png" alt="ThesisAidLK Logo" class="logo">
+        <h1>ThesisAidLK</h1>
+        <p>Your One-Stop Academic Support Center</p>
+    </div>
 
     <main>
         <section class="services">
             <h2>Our Services</h2>
             <div class="service-grid">
                 <div class="service-item">
-                    <i class="fas fa-pen"></i>
+                    <i class="fas fa-book"></i>
                     <h3>Thesis Writing</h3>
                     <p>Expert assistance in crafting your thesis from start to finish.</p>
                 </div>
@@ -41,20 +39,40 @@
                     <p>Crafting compelling SOPs for your academic applications.</p>
                 </div>
                 <div class="service-item">
-                    <i class="fas fa-book"></i>
+                    <i class="fas fa-book-open"></i>
                     <h3>Story Book Creation</h3>
                     <p>Creative writing services for various genres.</p>
                 </div>
                 <div class="service-item">
-                    <i class="fas fa-envelope-open-text"></i>
+                    <i class="fas fa-envelope"></i>
                     <h3>Cover Letter</h3>
                     <p>Professional cover letters for job applications and more.</p>
                 </div>
                 <div class="service-item">
-                    <i class="fas fa-user-tie"></i>
+                    <i class="fas fa-file-invoice"></i>
                     <h3>CV Writing</h3>
                     <p>Tailored CV writing to highlight your skills and experience.</p>
                 </div>
+            </div>
+        </section>
+
+        <section class="video-showcase">
+            <h2>Our Work</h2>
+            <div class="video-container">
+                <button class="scroll-btn left"><i class="fas fa-chevron-left"></i></button>
+                <div class="video-scroll">
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <!-- Add more video items as needed -->
+                </div>
+                <button class="scroll-btn right"><i class="fas fa-chevron-right"></i></button>
             </div>
         </section>
 
@@ -63,19 +81,18 @@
             <form id="jobRequestForm">
                 <select name="service" required>
                     <option value="">Select a Service</option>
-                    <option value="Thesis">Thesis Writing</option>
-                    <option value="Assignment">Assignment Help</option>
+                    <option value="Thesis Writing">Thesis Writing</option>
+                    <option value="Assignment Help">Assignment Help</option>
                     <option value="Data Analysis">Data Analysis</option>
-                    <option value="SOP">Statement of Purpose (SOP)</option>
-                    <option value="Story Book">Story Book Creation</option>
+                    <option value="Statement of Purpose">Statement of Purpose (SOP)</option>
+                    <option value="Story Book Creation">Story Book Creation</option>
                     <option value="Cover Letter">Cover Letter</option>
-                    <option value="CV">CV Writing</option>
+                    <option value="CV Writing">CV Writing</option>
                     <option value="Other">Other</option>
                 </select>
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
-                <input type="tel" name="phone" placeholder="Your Phone Number" required>
-                <textarea name="description" placeholder="Job Description" required></textarea>
+                <textarea name="message" placeholder="Your Message" required></textarea>
                 <button type="submit">Submit Request</button>
             </form>
         </section>
