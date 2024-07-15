@@ -5,7 +5,7 @@ document.getElementById('jobRequestForm').addEventListener('submit', function(e)
     const formData = new FormData(form);
     const data = Object.fromEntries(formData);
     
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxBtwIpRzsf6g7d3-YDTn-P46p124--P9Rx73L5stEkYJw7gur5mUB0PqngsPiTjWw/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzYSQTqhL_6Qxgjz7-RAcl-imQJn0si-KV7Bryg3zD6jV6zYYDppi7LN_jxwSpbmY8/exec';
 
     fetch(scriptURL, {
         method: 'POST',
