@@ -42,3 +42,22 @@ document.getElementById('jobRequestForm').addEventListener('submit', function(e)
         alert('An error occurred. Please try again later.');
     });
 });
+
+// Video showcase scrolling
+const videoScroll = document.querySelector('.video-scroll');
+const scrollLeftBtn = document.querySelector('.scroll-btn.left');
+const scrollRightBtn = document.querySelector('.scroll-btn.right');
+
+scrollLeftBtn.addEventListener('click', () => {
+    videoScroll.scrollBy({
+        left: -300,
+        behavior: 'smooth'
+    });
+});
+
+scrollRightBtn.addEventListener('click', () => {
+    videoScroll.scrollBy({
+        left: 300,
+        behavior: 'smooth'
+    });
+});
