@@ -17,7 +17,7 @@
 }
 
 body {
-    font-family: 'Water Brush', cursive;
+    font-family: 'roboto', cursive;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--primary-color);
