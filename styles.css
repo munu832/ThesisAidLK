@@ -1,16 +1,26 @@
+@font-face {
+    font-family: 'Blackadder ITC';
+    src: url('path-to-blackadder-itc-font.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Kings';
+    src: url('path-to-kings-font.woff2') format('woff2');
+}
+
 :root {
-    --primary-color: #3498db;
-    --secondary-color: #2c3e50;
-    --accent-color: #e74c3c;
-    --background-color: #ecf0f1;
-    --text-color: #34495e;
+    --primary-color: #fefae4;
+    --secondary-color: #bcc9b0;
+    --accent-color: #be0d00;
+    --text-color: #3b372a;
+    --dark-accent: #8f7d6b;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Water Brush', cursive;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--background-color);
+    background-color: var(--primary-color);
     margin: 0;
     padding: 0;
 }
@@ -25,8 +35,9 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: var(--primary-color);
     padding: 1rem;
+    position: relative;
 }
 
 .logo {
@@ -35,14 +46,23 @@ body {
     margin-bottom: 1rem;
 }
 
+.logo.venture-spectrum {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 80px;
+}
+
 .cover-banner h1 {
-    font-size: 2.5rem;
+    font-family: 'Blackadder ITC', cursive;
+    font-size: 3.5rem;
     margin-bottom: 0.5rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .cover-banner p {
-    font-size: 1.2rem;
+    font-family: 'Kings', cursive;
+    font-size: 1.5rem;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
@@ -53,9 +73,11 @@ main {
 }
 
 h2 {
-    color: var(--secondary-color);
+    font-family: 'Blackadder ITC', cursive;
+    color: var(--text-color);
     text-align: center;
     margin-bottom: 2rem;
+    font-size: 2.5rem;
 }
 
 .service-grid {
@@ -66,7 +88,7 @@ h2 {
 }
 
 .service-item {
-    background-color: white;
+    background-color: var(--secondary-color);
     border-radius: 8px;
     padding: 1.5rem;
     text-align: center;
@@ -88,12 +110,14 @@ h2 {
 }
 
 .service-item h3 {
-    color: var(--secondary-color);
+    font-family: 'Kings', cursive;
+    color: var(--text-color);
     margin-bottom: 0.5rem;
+    font-size: 1.5rem;
 }
 
 .service-item p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--text-color);
 }
 
@@ -135,8 +159,8 @@ h2 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    background-color: var(--dark-accent);
+    color: var(--primary-color);
     border: none;
     font-size: 1.5rem;
     padding: 0.5rem;
@@ -164,14 +188,15 @@ form input,
 form textarea {
     margin-bottom: 1rem;
     padding: 0.75rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--dark-accent);
     border-radius: 4px;
     font-size: 1rem;
+    font-family: 'Water Brush', cursive;
 }
 
 form button {
     background-color: var(--accent-color);
-    color: white;
+    color: var(--primary-color);
     border: none;
     padding: 1rem;
     border-radius: 4px;
@@ -179,15 +204,16 @@ form button {
     transition: background-color 0.3s ease;
     font-size: 1rem;
     font-weight: bold;
+    font-family: 'Kings', cursive;
 }
 
 form button:hover {
-    background-color: #c0392b;
+    background-color: #8f0900;
 }
 
 footer {
-    background-color: var(--secondary-color);
-    color: white;
+    background-color: var(--dark-accent);
+    color: var(--primary-color);
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
@@ -199,11 +225,11 @@ footer {
     }
 
     .cover-banner h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .cover-banner p {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     main {
