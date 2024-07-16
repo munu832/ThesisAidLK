@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThesisAidLK - Excellence is Our Specialty</title>
+    <title>Thesis Aid LK</title>
     
     <!-- Open Graph meta tags -->
     <meta property="og:title" content="Thesis Aid LK - Excellence is Our Specialty">
@@ -19,9 +19,8 @@
     <meta name="twitter:image" content="https://munu832.github.io/ThesisAidLK/thesisaidlk_logo.png">
 
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div class="cover-banner">
@@ -32,76 +31,60 @@
     </div>
 
     <main>
-        <section class="services">
-            <h2 data-aos="fade-up">What We Offer</h2>
+        <section class="services" id="what-we-offer" data-aos="fade-up">
+            <h2>What We Offer</h2>
             <div class="service-grid">
                 <div class="service-item" data-aos="fade-up">
-                    <i class="fas fa-pencil-alt"></i>
                     <h3>Thesis Mastery</h3>
                     <p>Elevate your thesis with our expert guidance and efficient support.</p>
                 </div>
                 <div class="service-item" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fas fa-graduation-cap"></i>
                     <h3>Assignment Alchemy</h3>
                     <p>Transform your assignments into academic gold with our professional assistance.</p>
                 </div>
                 <div class="service-item" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fas fa-chart-line"></i>
                     <h3>Data Wizardry</h3>
                     <p>Unlock insights efficiently with our advanced statistical analysis expertise.</p>
                 </div>
                 <div class="service-item" data-aos="fade-up" data-aos-delay="300">
-                    <i class="fas fa-file-alt"></i>
                     <h3>SOP Storytelling</h3>
                     <p>Craft compelling Statements of Purpose that showcase your unique journey professionally.</p>
                 </div>
                 <div class="service-item" data-aos="fade-up" data-aos-delay="400">
-                    <i class="fas fa-plane-departure"></i>
                     <h3>Visa Application Stories</h3>
                     <p>Create captivating narratives to support your visa applications with expert finesse.</p>
                 </div>
                 <div class="service-item" data-aos="fade-up" data-aos-delay="500">
-                    <i class="fas fa-envelope-open-text"></i>
                     <h3>Cover Letter Craft</h3>
                     <p>Develop persuasive cover letters that open doors to opportunities efficiently.</p>
                 </div>
                 <div class="service-item" data-aos="fade-up" data-aos-delay="600">
-                    <i class="fas fa-user-tie"></i>
                     <h3>ATS-Optimized CVs</h3>
                     <p>Create resumes that shine for both human readers and ATS with professional expertise.</p>
                 </div>
             </div>
         </section>
 
-        <section class="video-showcase">
-            <h2 data-aos="fade-up">Our Work</h2>
+        <section class="video-showcase" id="our-work" data-aos="fade-up">
+            <h2>Our Work</h2>
             <div class="video-container" data-aos="fade-up">
-                <button class="scroll-btn left"><i class="fas fa-chevron-left"></i></button>
                 <div class="video-scroll">
-                    <div class="video-item">
-                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-item">
-                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-item">
-                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <!-- Add more video items as needed -->
+                    <div class="video-item"></div>
+                    <div class="video-item"></div>
+                    <div class="video-item"></div>
                 </div>
-                <button class="scroll-btn right"><i class="fas fa-chevron-right"></i></button>
             </div>
         </section>
 
-        <section class="contact">
-            <h2 data-aos="fade-up">Request Our Services</h2>
-            <form id="jobRequestForm" data-aos="fade-up">
+        <section class="contact" id="request-our-services" data-aos="fade-up">
+            <h2>Request Our Services</h2>
+            <form id="jobRequestForm">
                 <select name="service" required>
                     <option value="">Select a Service</option>
                     <option value="Thesis Writing">Thesis Writing</option>
                     <option value="Assignment Help">Assignment Help</option>
                     <option value="Data Analysis">Data Analysis</option>
-                    <option value="Statement of Purpose">Statement of Purpose (SOP)</option>
+                    <option value="Statement of Purpose (SOP)">Statement of Purpose (SOP)</option>
                     <option value="Visa Application Stories">Visa Application Stories</option>
                     <option value="Cover Letter">Cover Letter</option>
                     <option value="ATS-Optimized CV">ATS-Optimized CV</option>
@@ -109,8 +92,8 @@
                 </select>
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
-                <input type="tel" name="whatsapp" placeholder="WhatsApp Number (optional)">
-                <textarea name="message" placeholder="Your Message" required></textarea>
+                <input type="tel" name="whatsapp" placeholder="WhatsApp Number" required>
+                <textarea name="description" placeholder="Describe your request" required></textarea>
                 <button type="submit">Submit Request</button>
             </form>
         </section>
@@ -120,7 +103,6 @@
         <p>&copy; 2024 ThesisAidLK. All rights reserved.</p>
     </footer>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
