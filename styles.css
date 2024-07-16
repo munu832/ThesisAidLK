@@ -17,7 +17,7 @@
 }
 
 body {
-    font-family: 'roboto', cursive;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--primary-color);
@@ -191,7 +191,7 @@ form textarea {
     border: 1px solid var(--dark-accent);
     border-radius: 4px;
     font-size: 1rem;
-    font-family: 'Water Brush', cursive;
+    font-family: 'Open Sans', sans-serif;
 }
 
 form button {
