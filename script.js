@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
         once: true,
     });
 
-    
     const videoScroll = document.querySelector('.video-scroll');
     const scrollLeftBtn = document.querySelector('.scroll-btn.left');
     const scrollRightBtn = document.querySelector('.scroll-btn.right');
@@ -12,26 +11,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function scrollVideos(direction) {
         const scrollAmount = direction === 'right' ? 300 : -300;
-        videoScroll.scrollBy({
-            left: scrollAmount,
-            behavior: 'smooth'
-        });
-
-        // Check if we've reached the end and loop back to the beginning
-        if (direction === 'right' && videoScroll.scrollLeft + videoScroll.clientWidth >= videoScroll.scrollWidth) {
-            setTimeout(() => {
-                videoScroll.scrollTo({
-                    left: 0,
-                    behavior: 'smooth'
-                });
-            }, 500);
+        
+        if (direction === 'right' && videoScroll.scrollLeft + videoScroll.clientWidth >= videoScroll.scrollWidth - 10) {
+            // If we're at the end, jump to the start without animation
+            videoScroll.scrollTo({ left: 0, behavior: 'auto' });
         } else if (direction === 'left' && videoScroll.scrollLeft === 0) {
-            setTimeout(() => {
-                videoScroll.scrollTo({
-                    left: videoScroll.scrollWidth,
-                    behavior: 'smooth'
-                });
-            }, 500);
+            // If we're at the start, jump to the end without animation
+            videoScroll.scrollTo({ left: videoScroll.scrollWidth, behavior: 'auto' });
+        } else {
+            // Normal scroll with smooth behavior
+            videoScroll.scrollBy({ left: scrollAmount, behavior: 'smooth' });
         }
     }
 
@@ -64,22 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Start auto-scrolling
     startAutoScroll();
-
-    if (scrollLeftBtn && scrollRightBtn) {
-        scrollLeftBtn.addEventListener('click', () => {
-            videoScroll.scrollBy({
-                left: -300,
-                behavior: 'smooth'
-            });
-        });
-
-        scrollRightBtn.addEventListener('click', () => {
-            videoScroll.scrollBy({
-                left: 300,
-                behavior: 'smooth'
-            });
-        });
-    }
 
     document.getElementById('jobRequestForm').addEventListener('submit', function(e) {
         e.preventDefault();
