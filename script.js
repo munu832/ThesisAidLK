@@ -4,9 +4,66 @@ document.addEventListener('DOMContentLoaded', function() {
         once: true,
     });
 
+    
     const videoScroll = document.querySelector('.video-scroll');
     const scrollLeftBtn = document.querySelector('.scroll-btn.left');
     const scrollRightBtn = document.querySelector('.scroll-btn.right');
+    let autoScrollInterval;
+
+    function scrollVideos(direction) {
+        const scrollAmount = direction === 'right' ? 300 : -300;
+        videoScroll.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+
+        // Check if we've reached the end and loop back to the beginning
+        if (direction === 'right' && videoScroll.scrollLeft + videoScroll.clientWidth >= videoScroll.scrollWidth) {
+            setTimeout(() => {
+                videoScroll.scrollTo({
+                    left: 0,
+                    behavior: 'smooth'
+                });
+            }, 500);
+        } else if (direction === 'left' && videoScroll.scrollLeft === 0) {
+            setTimeout(() => {
+                videoScroll.scrollTo({
+                    left: videoScroll.scrollWidth,
+                    behavior: 'smooth'
+                });
+            }, 500);
+        }
+    }
+
+    function startAutoScroll() {
+        autoScrollInterval = setInterval(() => {
+            scrollVideos('right');
+        }, 5000); // Change interval as needed (currently set to 5 seconds)
+    }
+
+    function stopAutoScroll() {
+        clearInterval(autoScrollInterval);
+    }
+
+    if (scrollLeftBtn && scrollRightBtn) {
+        scrollLeftBtn.addEventListener('click', () => {
+            scrollVideos('left');
+            stopAutoScroll();
+            startAutoScroll();
+        });
+
+        scrollRightBtn.addEventListener('click', () => {
+            scrollVideos('right');
+            stopAutoScroll();
+            startAutoScroll();
+        });
+    }
+
+    videoScroll.addEventListener('mouseover', stopAutoScroll);
+    videoScroll.addEventListener('mouseout', startAutoScroll);
+
+    // Start auto-scrolling
+    startAutoScroll();
 
     if (scrollLeftBtn && scrollRightBtn) {
         scrollLeftBtn.addEventListener('click', () => {
