@@ -244,4 +244,14 @@ footer {
         width: 100%;
         height: 56.25vw;
     }
+
+    .logo.venture-spectrum {
+        width: 60px; /* Reduced size for tablets and large phones */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo.venture-spectrum {
+        width: 40px; /* Further reduced size for smaller phones */
+    }
 }
