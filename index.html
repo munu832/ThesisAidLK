@@ -3,62 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThesisAidLK - Your One-Stop Academic Support Center</title>
+    <title>ThesisAidLK - Excellence is Our Specialty</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Water+Brush&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="cover-banner">
-        <img src="logo.png" alt="ThesisAidLK Logo" class="logo">
+        <img src="thesisaidlk_logo.png" alt="ThesisAidLK Logo" class="logo thesisaidlk">
         <h1>ThesisAidLK</h1>
-        <p>Your One-Stop Academic Support Center</p>
+        <p>Excellence is Our Specialty</p>
+        <img src="venture_spectrum_logo.png" alt="Venture Spectrum Logo" class="logo venture-spectrum">
     </div>
 
     <main>
         <section class="services">
-            <h2>Our Services</h2>
+            <h2 data-aos="fade-up">What We Offer</h2>
             <div class="service-grid">
-                <div class="service-item">
-                    <i class="fas fa-book"></i>
-                    <h3>Thesis Writing</h3>
-                    <p>Expert assistance in crafting your thesis from start to finish.</p>
+                <div class="service-item" data-aos="fade-up">
+                    <i class="fas fa-pencil-alt"></i>
+                    <h3>Thesis Mastery</h3>
+                    <p>Elevate your thesis with our expert guidance and efficient support.</p>
                 </div>
-                <div class="service-item">
-                    <i class="fas fa-tasks"></i>
-                    <h3>Assignment Help</h3>
-                    <p>Comprehensive support for all types of academic assignments.</p>
+                <div class="service-item" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Assignment Alchemy</h3>
+                    <p>Transform your assignments into academic gold with our professional assistance.</p>
                 </div>
-                <div class="service-item">
-                    <i class="fas fa-chart-bar"></i>
-                    <h3>Data Analysis</h3>
-                    <p>Advanced statistical analysis using R, SPSS, and MiniTab.</p>
+                <div class="service-item" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Data Wizardry</h3>
+                    <p>Unlock insights efficiently with our advanced statistical analysis expertise.</p>
                 </div>
-                <div class="service-item">
+                <div class="service-item" data-aos="fade-up" data-aos-delay="300">
                     <i class="fas fa-file-alt"></i>
-                    <h3>Statement of Purpose</h3>
-                    <p>Crafting compelling SOPs for your academic applications.</p>
+                    <h3>SOP Storytelling</h3>
+                    <p>Craft compelling Statements of Purpose that showcase your unique journey professionally.</p>
                 </div>
-                <div class="service-item">
-                    <i class="fas fa-book-open"></i>
-                    <h3>Story Book Creation</h3>
-                    <p>Creative writing services for various genres.</p>
+                <div class="service-item" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-plane-departure"></i>
+                    <h3>Visa Application Stories</h3>
+                    <p>Create captivating narratives to support your visa applications with expert finesse.</p>
                 </div>
-                <div class="service-item">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Cover Letter</h3>
-                    <p>Professional cover letters for job applications and more.</p>
+                <div class="service-item" data-aos="fade-up" data-aos-delay="500">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <h3>Cover Letter Craft</h3>
+                    <p>Develop persuasive cover letters that open doors to opportunities efficiently.</p>
                 </div>
-                <div class="service-item">
-                    <i class="fas fa-file-invoice"></i>
-                    <h3>CV Writing</h3>
-                    <p>Tailored CV writing to highlight your skills and experience.</p>
+                <div class="service-item" data-aos="fade-up" data-aos-delay="600">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>ATS-Optimized CVs</h3>
+                    <p>Create resumes that shine for both human readers and ATS with professional expertise.</p>
                 </div>
             </div>
         </section>
 
         <section class="video-showcase">
-            <h2>Our Work</h2>
-            <div class="video-container">
+            <h2 data-aos="fade-up">Our Work</h2>
+            <div class="video-container" data-aos="fade-up">
                 <button class="scroll-btn left"><i class="fas fa-chevron-left"></i></button>
                 <div class="video-scroll">
                     <div class="video-item">
@@ -77,17 +80,17 @@
         </section>
 
         <section class="contact">
-            <h2>Request Our Services</h2>
-            <form id="jobRequestForm">
+            <h2 data-aos="fade-up">Request Our Services</h2>
+            <form id="jobRequestForm" data-aos="fade-up">
                 <select name="service" required>
                     <option value="">Select a Service</option>
                     <option value="Thesis Writing">Thesis Writing</option>
                     <option value="Assignment Help">Assignment Help</option>
                     <option value="Data Analysis">Data Analysis</option>
                     <option value="Statement of Purpose">Statement of Purpose (SOP)</option>
-                    <option value="Story Book Creation">Story Book Creation</option>
+                    <option value="Visa Application Stories">Visa Application Stories</option>
                     <option value="Cover Letter">Cover Letter</option>
-                    <option value="CV Writing">CV Writing</option>
+                    <option value="ATS-Optimized CV">ATS-Optimized CV</option>
                     <option value="Other">Other</option>
                 </select>
                 <input type="text" name="name" placeholder="Your Name" required>
@@ -102,6 +105,7 @@
         <p>&copy; 2024 ThesisAidLK. All rights reserved.</p>
     </footer>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
