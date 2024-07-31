@@ -110,10 +110,17 @@ h2 {
 }
 
 .service-item h3 {
-    font-family: 'Kings', cursive;
-    color: var(--text-color);
-    margin-bottom: 0.5rem;
-    font-size: 1.5rem;
+  font-family: 'Kings', cursive;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .service-item h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+  }
 }
 
 .service-item p {
@@ -271,7 +278,8 @@ footer {
     .logo.venture-spectrum {
         width: 40px; /* Further reduced size for smaller phones */
     }
-    .whatsapp-button {
+}
+.whatsapp-button {
   position: fixed;
   right: 20px;
   bottom: 20px;
@@ -303,5 +311,4 @@ footer {
     right: 10px;
     bottom: 10px;
   }
-}
 }
