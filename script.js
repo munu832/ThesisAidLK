@@ -117,6 +117,18 @@ document.addEventListener('DOMContentLoaded', function() {
             return validPrefixes.some(prefix => cleanNumber.startsWith(prefix));
         }
         
+        document.addEventListener('DOMContentLoaded', function() {
+  const whatsappButton = document.querySelector('.whatsapp-button');
+  
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 100) {
+      whatsappButton.style.display = 'flex';
+    } else {
+      whatsappButton.style.display = 'none';
+    }
+  });
+});
+        
         return false;
     }
 });
